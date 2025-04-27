@@ -1,0 +1,205 @@
+/* === Global Styles === */
+body {
+    background: #fff !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Home Button === */
+.home-button {
+    display: inline-block; /* Allow margin/padding */
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.home-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05);
+}
+
+/* === Cart Content Container === */
+.cart-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 32px;
+    background: rgba(255,255,255,0.97);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* === Cart Table Styles === */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between borders */
+    margin-top: 20px;
+}
+
+.cart-table th,
+.cart-table td {
+    border: 1px solid #555; /* Darker border for better contrast */
+    padding: 12px; /* Increased padding */
+    text-align: center; /* Center text */
+    vertical-align: middle; /* Vertically align content */
+}
+
+.cart-table th { /* Header cells */
+    background-color: #333; /* Dark background for header */
+    color: #ff5200; /* Orange text color */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase header text */
+}
+
+.cart-item img {
+    max-width: 80px; /* Limit image size */
+    height: auto;
+    border-radius: 4px; /* Rounded corners for images */
+}
+
+/* === Input/Button Styles within Table === */
+.cart-item input[type="number"] {
+    width: 60px; /* Fixed width for quantity input */
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f0f0f0; /* Light background for input */
+    color: #333; /* Dark text color */
+}
+
+.cart-item input[type="submit"],
+.cart-item button,
+.cart-item .button { /* General button style */
+    padding: 8px 12px;
+    background-color: #ff5200; /* Orange background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+    margin: 0 5px; /* Add some horizontal margin */
+}
+
+.cart-item input[type="submit"]:hover,
+.cart-item button:hover,
+.cart-item .button:hover {
+    background-color: #e04800; /* Darker orange on hover */
+    transform: scale(1.05);
+}
+
+.cart-item form {
+    display: flex; /* Align quantity input and button */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for delete button specifically */
+.cart-item form[action="deletecartitem"] input[type="submit"] {
+    background-color: #f44336; /* Red background for delete */
+}
+
+.cart-item form[action="deletecartitem"] input[type="submit"]:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* === Cart Bottom Section === */
+.cart-bottom td {
+    font-weight: bold;
+    background-color: #222; /* Darker background for totals row */
+}
+
+.cart-bottom a {
+    color: #ff5200; /* Orange link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cart-bottom a:hover {
+    text-decoration: underline;
+}
+
+.cart-bottom form input[type="submit"] { /* Checkout button */
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.cart-bottom form input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05);
+}
+
+/* === Bill Page Specific Styles (if needed, based on Bill.jsp using this CSS) === */
+/* Example: Styles for address/phone input fields in Bill.jsp */
+form[action="ordercomplete"] input[type="text"] {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 10px 5px; /* Adjusted margin */
+    display: block; /* Make them block level */
+    width: calc(50% - 10px); /* Try to make them fit side-by-side */
+    float: left; /* Float left */
+}
+
+form[action="ordercomplete"]::after { /* Clear float */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+form[action="ordercomplete"] input[type="submit"] { /* Order button */
+    padding: 10px 20px;
+    color: white;
+    background-color: #f44336; /* Red */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block; /* Make it block */
+    width: fit-content; /* Fit content width */
+    margin: 20px auto 0 auto; /* Center with margin */
+    clear: both; /* Ensure it's below floated inputs */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+form[action="ordercomplete"] input[type="submit"]:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+h1, h2, h3 {
+    color: #ff5200;
+    margin-bottom: 18px;
+}
+
+.cart-item {
+    border-bottom: 1px solid #eee;
+    padding: 14px 0;
+}
+
+.cart-total {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.2em;
+}
