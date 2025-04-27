@@ -1,0 +1,309 @@
+/* === Global Styles === */
+body {
+    background: #fff !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+/* === Home Button === */
+.home-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* === Main Container === */
+.container-fluid.padding {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* === Two Column Layout (using existing classes as selectors) === */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.banner { /* Left column: Product image and details */
+    flex: 0 0 60%; /* Adjust width as needed */
+    max-width: 60%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.favorite { /* Right column: Related products */
+    flex: 0 0 40%; /* Adjust width as needed */
+    max-width: 40%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 30px; /* Add some top margin */
+}
+
+/* === Product Details Section (.banner content) === */
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.bestseller { /* Container for product image and info */
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 3px solid #888;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex; /* Use flex for image and text layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    margin-bottom: 30px;
+}
+
+.bestseller .col-lg-6:first-child { /* Image container */
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-right: 20px;
+}
+
+.bestseller img.favorite-item-img { /* Product image */
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.bestseller .col-lg-6:last-child { /* Text info container */
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.bestseller p { /* Product info text */
+    color: white;
+    font-size: 16px; /* Increased size */
+    margin-bottom: 10px; /* Add spacing */
+}
+
+.bestseller h3 { /* Product price */
+    color: aqua;
+    font-size: 20px; /* Increased size */
+    margin: 10px 0;
+}
+
+.bestseller form { /* Add to cart form */
+    margin-top: 15px;
+}
+
+.bestseller input[type="submit"] { /* Add to cart button */
+    padding: 10px 20px;
+    background-color: #ff5200;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.bestseller input[type="submit"]:hover {
+    background-color: #e04800;
+    transform: scale(1.05);
+}
+
+.quantity-btn { /* Quantity input */
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #f0f0f0;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 70px;
+    text-align: center;
+}
+
+/* === Review Section === */
+.review-box { /* Container for all reviews */
+    margin-bottom: 50px;
+    clear: both; /* Ensure it's below floated/flex elements if any */
+}
+
+.review-table { /* Individual review container */
+    margin-top: 20px; /* Adjusted margin */
+    color: white;
+    text-align: left;
+    margin-bottom: 20px; /* Adjusted margin */
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 3px solid #888;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.review-table tr td { /* Review content cells */
+    padding: 5px 0; /* Adjusted padding */
+    display: block; /* Make cells block level */
+}
+
+.review-table tr td:first-child { /* Username */
+    font-weight: bold;
+    color: #ff5200;
+}
+
+.review-table tr td span { /* Rating/Date span */
+    padding-right: 20px; /* Adjusted padding */
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* === Related Products Section (.favorite content) === */
+.favorite #list-option h2 { /* Section title */
+    color: #ff5200;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.favorite .favorite-item-father { /* Grid item container */
+}
+
+.favorite .favorite-item { /* Related product card */
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 3px solid rgb(157, 153, 153);
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 20px; /* Add margin between items */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.favorite .favorite-item-img { /* Related product image */
+    width: 100%;
+    height: 150px; /* Smaller height for related items */
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.favorite .favorite-item p { /* Related product name */
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.favorite .favorite-item h3 { /* Related product price */
+    color: aqua;
+    font-size: 16px;
+    margin: 5px 10px;
+}
+
+.favorite .favorite-item form { /* Button form */
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.favorite .favorite-item input[type="submit"] { /* View button */
+    padding: 8px 15px;
+    background-color: #ff5200;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 10px auto;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.favorite .favorite-item input[type="submit"]:hover {
+    background-color: #e04800;
+    transform: scale(1.05);
+}
+
+/* === Product Description Container === */
+.product-des-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 32px;
+    background: rgba(255,255,255,0.97);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* === Typography === */
+h1, h2, h3 {
+    color: #ff5200;
+    margin-bottom: 18px;
+}
+
+.product-img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+p, li {
+    font-size: 1.07em;
+    margin-bottom: 10px;
+}
+
+/* === Footer Styles === */
+#footer { /* Footer container */
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #ff5200; /* Match button color */
+    clear: both; /* Ensure footer is below columns */
+}
+
+#footer .row {
+    display: block;
+}
+
+.footer { /* Inner footer content */
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer h5 { /* Copyright text */
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: normal;
+}
